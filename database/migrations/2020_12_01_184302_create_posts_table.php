@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('img');
             $table->text('text');
             $table->integer('quantity');
-            $table->double('price', 8, 2);
+            $table->float('price', 8, 2);
             $table->bigInteger('cat_id')->unsigned();
             $table->timestamps();
         });

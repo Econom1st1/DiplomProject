@@ -14,8 +14,14 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
-                    <a href="/adminpanel"> Перехід на адмін панель</a>
+                    {{ __('Ви увійшли в систему!') }}
+
+                    @role('admin')
+                        <script>window.location = "/adminpanel";</script>
+                        @endrole
+                    @role('user')
+                            <script>window.location = "/user";</script>
+                    @endrole
                 </div>
             </div>
         </div>

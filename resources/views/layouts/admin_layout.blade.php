@@ -74,10 +74,10 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="/admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                        <img src="" class="img-circle elevation-2" alt="">
                     </div>
                     <div class="info">
-                        <h4 class="d-block">{{ Auth::user()->name }}</h4>
+                        <h4 style="color: lightgrey" class="d-block">{{ Auth::user()->name }}</h4>
                     </div>
                 </div>
 

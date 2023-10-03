@@ -14,8 +14,10 @@ class Post extends Model
         return $this->belongsTo('App\Models\Category', 'cat_id');
     }
 
-    public function getUnitPriceAttribute($price)
+    protected $guarded = [];
+
+    public function getUnitPriceAttribute($value)
     {
-        return number_format($price, 2);
+        return number_format($value, 2);
     }
 }

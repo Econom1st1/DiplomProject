@@ -25,18 +25,17 @@
                  <div>
 
                      <div wire:sortable-group.item-group="{{$group->id}}" class="pb-3">
-
                          @foreach($group->cards as $card)
                              <div wire:key="card-{{$card->id}}" wire:sortable-group.item="{{$card->id}}">
                                  <span class="list-group list-group-flush">{{$card->title}}</span>
-                                 <button wire:click="deleteCard({{$card->id}})">x</button>
                              </div>
+                             <div><button wire:click="deleteCard({{$card->id}})">x</button></div>
                          @endforeach
                      </div>
 
                      @if($addCard==$group->id)
                          <form wire:submit.prevent="save">
-                             <input wire:model.defer="title" type="text" style="background-color: gray">
+                             <input wire:model.defer="title" type="text">
                          </form>
                      @else
                          <button wire:click="addCard({{$group->id}})" class="mt-3 cursor-pointer">
