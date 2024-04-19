@@ -42,5 +42,5 @@ Route::get('/user', function () {
     $posts = Post::all();
 
     return view('user.index', compact('posts'));
-})->name('user');tt
+})->name('user');
 
